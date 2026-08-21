@@ -9,7 +9,7 @@ def format_data(account):
     return f"{account_name},a {account_desc},from {account_country}"
 
 def check_answer(user_guess, a_follower, b_follower):
-    if a_follower_count > b_follower_count:
+    if a_follower > b_follower:
         return user_guess == "a"
     else:
         return user_guess == "b"

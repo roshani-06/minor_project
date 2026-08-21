@@ -19,7 +19,12 @@ should_continue = True
 while should_continue:
     direction = input("Type 'encode' to encrypt or type 'decode' to decrypt\n").lower()
     text = input("Type your message\n").lower()
-    shift = int(input("Type the shift number\n"))
+    while True:
+        try:
+            shift = int(input("Type the shift number\n"))
+            break
+        except ValueError:
+            print("Invalid input. Please enter a whole number.")
     ceaser(text, shift, direction)
 
     restart = input("Type 'yes' if you want to continue, otherwise 'no'\n").lower()

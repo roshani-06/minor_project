@@ -14,9 +14,19 @@ print(placeholder)
 
 game_over = False
 correct_list = []
+guessed_letters = []
 
 while not game_over:
     Guess = input("Guess a letter:").lower()
+
+    if len(Guess) != 1 or not Guess.isalpha():
+        print("Please enter a single letter.")
+        continue
+
+    if Guess in guessed_letters:
+        print(f"You already guessed '{Guess}'. Try a different letter.")
+        continue
+    guessed_letters.append(Guess)
 
     display = ""
     for letter in chosen_word:

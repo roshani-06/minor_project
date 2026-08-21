@@ -24,7 +24,6 @@ def game():
     print("Welcome to the Guess Number")
     print("I am thinking of a number between 1 and 100")
     chose_number = random.randint(1, 100)
-    print(chose_number)
     turns = check_difficulty()
     guess = 0
     while guess != chose_number:

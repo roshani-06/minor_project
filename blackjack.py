@@ -61,12 +61,14 @@ def play_game():
                 is_game_over = True
 
     while  computer_score != 0 and computer_score < 17:
-        user_card.append(deal_card())
+        computer_cards.append(deal_card())
         computer_score = calculate_score(computer_cards)
 
     print(f"Your cards: {user_card}, final score: {user_score}")
     print(f"Computer's final card: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
+
+play_game()
 
 while input("Do you want to play again? (y/n): ").lower() == "y":
     print("\n" *20)
